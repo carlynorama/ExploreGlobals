@@ -1,7 +1,7 @@
 # Working With C Globals
 
 ## Assumptions
-- Prefer not to write a whole bunch of new C
+- Prefer not to write a whole bunch of new C, but that may be the result. 
 - The original C API is not totally under ones own control and its old and crufty style. 
 
 ## TODO
@@ -28,12 +28,22 @@ Is there a way (in a header?) to blanket wrap the C library in a global actor?
 
 ### Let Swift Actor Take Ownership of a Pointer to global C var?
 
+#### ValueMask.swift
+
 Can you slip a pointer into a type... and then be safe by just accessing the pointer after that? 
 
-## Somehow get all the C code into a global actor?
+### Write a Custom rather than Generic wrapper
 
-## Mutex?
+#### CounterMask.swift
 
-So its pretty clear how to write a Mutex or swift, but how would I get a pointer to the C into the type with the Mutex?? Same as problem with Actor really? 
+### Somehow get all the C code into a global actor?
+
+#### GlobalActor.swift
+
+### Mutex?
+
+#### Mutex.swift
+
+So its pretty clear how to write a Mutex for a Swift-owned value, but how would I get a pointer to the C into the type with the Mutex?? Same as problem with Actor really? 
 
 

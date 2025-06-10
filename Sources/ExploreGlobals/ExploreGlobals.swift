@@ -3,10 +3,10 @@ import BackingC
 struct ExploreGlobals {
     //let counter = ValueMask<CInt>(&shared_count)
 
-    static func main() throws {
+    static func main() async throws {
         //won't work
         //error: reference to var 'shared_count' is not concurrency-safe because it involves shared mutable state
-        //when try to run in 5.11 mode fails with linker error.
+        //when try to run in 5.11 mode non async fails with linker error?
         //duplicate symbols in backing_items.c.o and ExploreGlobals.swift.o
         //print(shared_count)
 
@@ -17,7 +17,7 @@ struct ExploreGlobals {
         print(get_count())
 
         //With a ValueMask
-        //Won't accept the pointer as an initializer. 
+        //Won't accept the pointer as an initializer because still shared mutable. 
         //let counter = ValueMask<CInt>(&shared_count)
 
 
