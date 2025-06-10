@@ -1,8 +1,7 @@
-
+import BackingC
 @main
 struct ExploreGlobals {
     static func main() async throws {
-        print("hello")
-        print()
+        print(just_an_int)
     }
 }
