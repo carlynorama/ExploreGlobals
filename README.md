@@ -19,8 +19,15 @@
 
 If they don't exist, write accessors in C
 
-pro: potentially easy. Swift doesn't even need to know you're misbehaving.
-con: no one will stop you from misbehaving.
+pro: potentially easy if not time consuming. Swift doesn't even need to know you're misbehaving.
+con: no one will stop you from misbehaving. (unless write locks in the C, pita. )
+
+### Put lightweight C helper funcs in an actor
+
+#### CounterCompromise.swift
+
+- pro: better than nothing.
+- con: a lot of work for EVERY global and still potentially a bunch of new C. 
 
 ### Header Tricks?
 
