@@ -5,18 +5,18 @@
             "request": "launch",
             "args": [],
             "cwd": "${workspaceFolder:ExploreGlobals}",
-            "name": "Debug arrayme",
-            "program": "${workspaceFolder:ExploreGlobals}/.build/debug/arrayme",
-            "preLaunchTask": "swift: Build Debug arrayme"
+            "name": "Debug clobal",
+            "program": "${workspaceFolder:ExploreGlobals}/.build/debug/clobal",
+            "preLaunchTask": "swift: Build Debug clobal"
         },
         {
             "type": "swift",
             "request": "launch",
             "args": [],
             "cwd": "${workspaceFolder:ExploreGlobals}",
-            "name": "Release arrayme",
-            "program": "${workspaceFolder:ExploreGlobals}/.build/release/arrayme",
-            "preLaunchTask": "swift: Build Release arrayme"
+            "name": "Release clobal",
+            "program": "${workspaceFolder:ExploreGlobals}/.build/release/clobal",
+            "preLaunchTask": "swift: Build Release clobal"
         }
     ]
 }

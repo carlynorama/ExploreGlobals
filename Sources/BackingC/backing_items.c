@@ -1,7 +1,17 @@
 #include "backing_items.h"
 
 
-// void print_array(int array[], int count) {
-//     for (int i = 0; i < count; i++)
-//         printf("%d ", array[i]);
-// }
+//ACCESSORS 
+int get_count() {
+    return shared_count;
+}
+
+int increment_count(int n) { 
+    shared_count = shared_count + n;
+    return shared_count; 
+}
+
+int decrement_count(int n) { 
+    shared_count = shared_count + n;
+    return shared_count; 
+}

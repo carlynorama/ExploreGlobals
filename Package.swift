@@ -1,4 +1,4 @@
-// swift-tools-version: 6.1
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -9,7 +9,7 @@ let package = Package(
         .macOS(.v15), .iOS(.v18)
     ],
     products: [
-        .executable(name: "arrayme", targets: ["ExploreGlobals"])
+        .executable(name: "clobal", targets: ["ExploreGlobals"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.

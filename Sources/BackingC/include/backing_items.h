@@ -3,6 +3,11 @@
 
 #include <stdio.h>
 
-int just_an_int = 3;
+int shared_count = 3;
+
+//the getters and setters that "should" exist
+int get_count();
+int increment_count(int n);
+int decrement_count(int n);
 
 #endif /* backing_items */
