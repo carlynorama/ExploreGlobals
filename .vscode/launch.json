@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:ExploreGlobals}",
+            "name": "Debug arrayme",
+            "program": "${workspaceFolder:ExploreGlobals}/.build/debug/arrayme",
+            "preLaunchTask": "swift: Build Debug arrayme"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:ExploreGlobals}",
+            "name": "Release arrayme",
+            "program": "${workspaceFolder:ExploreGlobals}/.build/release/arrayme",
+            "preLaunchTask": "swift: Build Release arrayme"
+        }
+    ]
+}
