@@ -2,7 +2,12 @@
 
 ## Assumptions
 - Prefer not to write a whole bunch of new C, but that may be the result. 
-- The original C API is not totally under ones own control and its old and crufty style. 
+- The original C API is not under ones own control and it's old and has a crufty style. 
+- The variable exists for the duration of the program and is created by the C. 
+
+## Where is @main
+
+ExploreGlobals.swift
 
 ## TODO
 
@@ -10,7 +15,7 @@
 
 ## Related Repos
 
-- https://github.com/carlynorama/UnsafeExplorer
+- https://github.com/carlynorama/UnsafeExplorer (various C accessors)
 - https://github.com/carlynorama/SwiftLIBPNG (wrapping a system lib)
 
 ## Options
@@ -27,7 +32,10 @@ con: no one will stop you from misbehaving. (unless write locks in the C, pita. 
 #### CounterCompromise.swift
 
 - pro: better than nothing.
-- con: a lot of work for EVERY global and still potentially a bunch of new C. 
+- con: 
+    - a lot of work for EVERY global and still potentially a bunch of new C.
+    - every CounterCompromise points to same global var location. requires discipline to only use shared.  
+
 
 ### Header Tricks?
 
@@ -37,7 +45,10 @@ Is there a way (in a header?) to blanket wrap the C library in a global actor?
 
 #### ValueMask.swift
 
-Can you slip a pointer into a type... and then be safe by just accessing the pointer after that? 
+pro - the instance is specific to the actual global.
+    - in this version no lifetime management, so really only for values that exist for the duration of the program. 
+
+Can you slip a pointer into a type past concurrency checking... and then be safe by just accessing the pointer after that? 
 
 ### Write a Custom rather than Generic wrapper
 

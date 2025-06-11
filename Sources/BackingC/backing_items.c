@@ -1,7 +1,7 @@
 #include "backing_items.h"
 
 
-//ACCESSORS 
+//CUSTOM ACCESSORS 
 int get_count() {
     return shared_count;
 }

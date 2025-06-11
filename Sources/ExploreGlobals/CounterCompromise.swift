@@ -1,7 +1,7 @@
 import BackingC
 
 actor CounterCompromise {
-    static var shared = CounterCompromise()
+    static let shared = CounterCompromise()
 
     func get() -> CInt{
         get_count()

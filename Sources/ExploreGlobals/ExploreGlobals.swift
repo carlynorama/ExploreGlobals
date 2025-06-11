@@ -20,6 +20,11 @@ struct ExploreGlobals {
         //Won't accept the pointer as an initializer because still shared mutable. 
         //let counter = ValueMask<CInt>(&shared_count)
 
+        //Compromise version
+        //wrote more custom C, wrap it in an actor for the Swift.
+        print(await CounterCompromise.shared.get())
+
+
 
     }
 }
