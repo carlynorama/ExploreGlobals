@@ -103,10 +103,6 @@ has attribute
 
 #if clang
 
-#earns free beer 
-
-jonathan michael
-
 https://developer.apple.com/documentation/foundation/ns_swift_ui_actor
 
 https://github.com/swiftlang/swift-foundation/blob/dcbdbf6430c402a0a7c9fba0ef26b71ac47c8eeb/Sources/_FoundationCShims/include/io_shims.h#L26
