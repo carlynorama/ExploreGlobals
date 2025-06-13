@@ -1,0 +1,4 @@
+Name: BackingC
+Globals:
+- Name: shared_count
+  SwiftName: "callItGeorge"

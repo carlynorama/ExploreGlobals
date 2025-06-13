@@ -1,0 +1,11 @@
+module BackingC {
+  explicit module backing_items {
+    header "backing_items.h"
+    export *
+  }
+
+  explicit module support_items {
+    header "support_items.h"
+    export *
+  }
+}
