@@ -1,7 +1,7 @@
 #ifndef backing_items_h
 #define backing_items_h
 
-#include <stdio.h>
+//#include <stdio.h>
 
 //represents value original library expects one to 
 //manipulate. 
