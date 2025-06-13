@@ -1,3 +1,6 @@
+
+import BackingC
+
 @globalActor actor CInterfaceActor : GlobalActor {
     static let shared: CInterfaceActor = CInterfaceActor()
 
@@ -5,14 +8,15 @@
     
 }
 
+@CInterfaceActor struct IsolatedCounter {
 
-@CInterfaceActor struct Counter {
-    var count:CInt {
-        get {
-            //still shared mutable state.
-            //shared_count
-            return 0
-        }
+    //Reference to var 'customActorGlobal' is not concurrency-safe because it involves shared mutable state
+    // var counterAlias:CInt {
+    //     customActorGlobal
+    // }
+
+    func getValue() -> CInt {
+        custom_actor_getter()
     }
 
 }

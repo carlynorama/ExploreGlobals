@@ -16,12 +16,20 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .executableTarget(
             name: "ExploreGlobals",
-            dependencies: ["BackingC"]),
+            dependencies: ["BackingC"],
+            //no not a swift setting 
+            // swiftSettings: [ .unsafeFlags(["-fapi-notes-modules"])]
+        ),
         .testTarget(
             name: "ExploreGlobalsTests",
             dependencies: ["ExploreGlobals"]
         ),
 
-        .target(name: "BackingC")
+        .target(
+            name: "BackingC",
+            cSettings: [
+                .unsafeFlags(["-fapinotes-modules"])
+            ]
+        )
     ]
 )
