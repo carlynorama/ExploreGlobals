@@ -1,5 +1,3 @@
-import BackingC
-
 @globalActor actor CInterfaceActor : GlobalActor {
     static let shared: CInterfaceActor = CInterfaceActor()
 

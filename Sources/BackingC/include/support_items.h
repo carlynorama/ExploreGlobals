@@ -2,7 +2,7 @@
 #define support_items_h
 
 //#include <stdio.h>
-
+#include "backing_items.h"
 
 //the getters and setters that "should" exist in that lib
 //but don't so one wrote themselves. 

@@ -8,4 +8,9 @@ module BackingC {
     header "support_items.h"
     export *
   }
+
+  explicit module async_examples {
+    header "async_examples.h"
+    export *
+  }
 }
