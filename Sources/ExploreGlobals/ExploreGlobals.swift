@@ -13,6 +13,10 @@ import BackingC
     @CInterfaceActor var fromPlainGetter: CInt {
         plain_getter()
      }
+
+     @MainActor var fromCustomActorGetter: CInt {
+         custom_actor_getter()
+     }
 @main
 struct ExploreGlobals {
     //let counter = ValueMask<CInt>(&shared_count)
