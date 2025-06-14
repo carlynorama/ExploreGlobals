@@ -6,6 +6,10 @@ int customActorGlobal = 24;
 
 int custom_actor_getter() { return customActorGlobal; }
 
+int main_actor_getter() { return 37; }
+
+int plain_getter() { return 675; }
+
 // https://forums.swift.org/t/using-c-functions-as-swift-struct-methods/40396/3
 // https://developer.apple.com/videos/play/wwdc2020/10680/
 // https://developer.apple.com/documentation/swift/customizing-your-c-code-for-swift

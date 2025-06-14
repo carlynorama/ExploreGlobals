@@ -3,11 +3,16 @@
 __attribute__((swift_attr("@MainActor"))) extern int mainActorGlobal;
 
 
-__attribute__((swift_attr("@CInterfaceActor"))) extern int customActorGlobal;
+__attribute__((swift_attr("@CInterfaceActor"), swift_private)) 
+extern int customActorGlobal;
 
 int custom_actor_getter()
 __attribute__((swift_attr("@CInterfaceActor")));
 
+int main_actor_getter() 
+__attribute__((swift_attr("@UIActor")));
+
+int plain_getter(); 
 
 
 //getting to know attributes

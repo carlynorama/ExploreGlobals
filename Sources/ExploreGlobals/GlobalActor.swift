@@ -14,6 +14,9 @@ import BackingC
     // var counterAlias:CInt {
     //     customActorGlobal
     // }
+    // @CInterfaceActor var customActorGlobal: CInt {
+    //     __customActorGlobal
+    //  }
 
     func getValue() -> CInt {
         custom_actor_getter()

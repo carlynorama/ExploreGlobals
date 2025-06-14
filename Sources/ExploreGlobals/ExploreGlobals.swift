@@ -1,8 +1,24 @@
 import BackingC
+
+
+    //  @CInterfaceActor var mainActorGetter: CInt {
+    //     main_actor_getter()
+    //  }
+
+
+    // @CInterfaceActor var customActorGlobal: CInt {
+    //     __customActorGlobal
+    //  }
+
+    @CInterfaceActor var fromPlainGetter: CInt {
+        plain_getter()
+     }
 @main
 struct ExploreGlobals {
     //let counter = ValueMask<CInt>(&shared_count)
     static let counter = IsolatedCounter()
+
+
 
     static func main() async throws {
         //won't work
@@ -14,6 +30,7 @@ struct ExploreGlobals {
         //print(callItGeorge)
 
         print(mainActorGlobal)
+        //print(__customActorGlobal)
 
         let counterValue = await counter.getValue()
         print(counterValue)
@@ -32,7 +49,7 @@ struct ExploreGlobals {
         //wrote more custom C, wrap it in an actor for the Swift.
         print(await CounterCompromise.shared.get())
 
-
+        print(await fromPlainGetter)
 
     }
 }
